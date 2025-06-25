@@ -1,0 +1,25 @@
+name: Daily Auto Commit
+
+on:
+  schedule:
+    - cron: '0 10 * * *'  # Runs every day at 10 AM UTC
+  workflow_dispatch:
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Set up Git
+        run: |
+          git config --global user.name "Neok1ra"
+          git config --global user.email "neok1ra@example.com"
+
+      - name: Run Auto Commit
+        run: |
+          echo "Activity at $(date)" >> commits.txt
+          git add commits.txt
+          git commit -m "Auto commit via GitHub Actions"
+          git push
