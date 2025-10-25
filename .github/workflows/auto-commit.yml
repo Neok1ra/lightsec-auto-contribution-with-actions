@@ -15,7 +15,7 @@ jobs:
       - name: Set up Git
         run: |
           git config --global user.name "Neok1ra"
-          git config --global user.email "neok1ra@example.com"
+          git config --global user.email "bannedbylight@gmail.com"
 
       - name: Run Auto Commit
         run: |

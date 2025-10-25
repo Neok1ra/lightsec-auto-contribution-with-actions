@@ -3,6 +3,10 @@
 # Navigate to repo directory
 cd "$(dirname "$0")"
 
+# Configure Git user
+git config user.name "Neok1ra"
+git config user.email "bannedbylight@gmail.com"
+
 # Create or update the commit log and backdate 50 commits
 for i in {1..50}
 do
